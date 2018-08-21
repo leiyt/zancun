@@ -17,7 +17,8 @@ npm run build
 
 * assetsPublicPath: '/oss/',    // 根目录创建 oss 文件夹(img,js,css) 测试环境
 * assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/',   // 正式环境
-* assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/wnl/',   // 正式环境 wnl* assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/',   // 正式环境 52dd
+* assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/wnl/',   // 正式环境 wnl
+* assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/',   // 正式环境 52dd
 
 2. 查看 src -- api -- index.js 里面的配置API接口地址 root 的值
 
