@@ -13,14 +13,14 @@ npm run dev
 ## 打包项目
 npm run build
 打包前注意查看配置信息，如是测试环境还是正式环境：
-1. 查看 config -- index.js 里面的 assetsPublicPath路径k
+#### 查看 config -- index.js 里面的 assetsPublicPath路径k
 
 * assetsPublicPath: '/oss/',    // 根目录创建 oss 文件夹(img,js,css) 测试环境
 * assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/',   // 正式环境
 * assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/wnl/',   // 正式环境 wnl
 * assetsPublicPath: 'https://ykdstatic.52dd.cn/oss/',   // 正式环境 52dd
 
-2. 查看 src -- api -- index.js 里面的配置API接口地址 root 的值
+#### 查看 src -- api -- index.js 里面的配置API接口地址 root 的值
 
 ###### 配置API接口地址
 * var root = 'http://apitest.52dd.cn/'   // 测试环境
