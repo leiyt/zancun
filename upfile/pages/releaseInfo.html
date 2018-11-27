@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>信息发布</title>
+  <link rel="stylesheet" href="../css/release.css">
+  <link rel="stylesheet" href="../css/zTreeStyle.css">
+</head>
+<body>
+  <div class="info">
+    <div class="head">
+      <span class="back"></span>
+      <span class="title">发布</span>
+      <span class="home"></span>
+    </div>
+    <div class="release">
+      <ul class="release_list">
+        <li class="item arrow_down">
+          <span class="i_title">发布栏目</span>
+          <span class="i_text float_r" id="release_column">
+            <select name="column" id="releaseColumn">
+              <option value="1">公告栏1</option>
+              <option value="2">公告通知</option>
+              <option value="3">我的消息</option>
+              <option value="4">资料库—产品资料</option>
+              <option value="5">保障升级—升级规则</option>
+              <option value="6">保障升级—活动方案</option>
+            </select>
+          </span>
+        </li>
+        <li class="item">
+          <span class="i_title">标题</span><span class="i_text float_r" id="release_title"><input type="text" maxlength="50"></span>
+        </li>
+        <li class="item">
+          <span class="i_title">内容</span>
+          <span class="icon_text float_r">
+              <span class="undeline icon_img">插入图片</span>
+              <span class="undeline icon_link">插入链接</span>
+          </span>
+          <div class="remak">
+            <textarea name="remark" id="remark" cols="40" rows="5" maxlength="800" placeholder="内容仅限800字">🐕🐕</textarea>
+          </div>
+        </li>
+        <li class="item">
+          <span class="i_title">附件</span>
+          <span class="icon_text float_r"><span class="undeline icon_up">上传</span></span>
+          <div class="remak">
+            <textarea name="remark" id="file" cols="40" rows="5" maxlength="800" placeholder="文件大小8M以内">🐖🐖</textarea>
+          </div>
+        </li>
+        <li class="item">
+          <span class="i_title">阅读对象(可多选)</span>
+          <div class="remak_box">
+            <div class="title">角色</div>
+            <div class="check_box">
+              <span><input type="checkbox" id="role1"><label for="role1">所有</label></span>
+              <span><input type="checkbox" id="role2"><label for="role2">内勤</label></span>
+              <span><input type="checkbox" id="role3"><label for="role3">外勤</label></span>
+            </div>
+            <div class="title">渠道</div>
+            <div class="check_box">
+              <span><input type="checkbox" id="way1"><label for="way1">所有</label></span>
+              <span><input type="checkbox" id="way2"><label for="way2">传统营销</label></span>
+              <span><input type="checkbox" id="way3"><label for="way3">顾问营销</label></span>
+              <span><input type="checkbox" id="way4"><label for="way4">服务营销</label></span>
+              <span><input type="checkbox" id="way5"><label for="way5">金玉兰营销</label></span>
+              <span><input type="checkbox" id="way6"><label for="way6">独立代理人</label></span>
+            </div>
+            <div class="title">机构级别<span class="to_organiz">指定机构</span></div>
+            <div class="check_box">
+              <span class="big_checkbox"><input type="checkbox" id="leval"><label for="leval">发布人所在机构及其隶属所有分支机构</label></span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="i_title">选择审核人(单选)</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 注 -->
+    <div class="notice">
+      <div class="n_title">注：可用三种方法发布信息</div>
+      <ul class="n_items">
+        <li class="item">1：选择栏目，填写标题，内容，选择阅读对象，提交审核</li>
+        <li class="item">2：选择栏目，直接上传附件，附件名即是标题，选择阅读对象，提交审核</li>
+        <li class="item">3：选择栏目，如转发微信号，请填写标题，并插入网页链接选择阅读对象，提交审核</li>
+      </ul>
+      <div class="btn_box">
+        <span class="btn btn_primary">提交审核</span>
+      </div>
+    </div>
+    <!-- 弹窗蒙层 -->
+    <div class="mask"></div>
+    <!-- 插入图片弹窗 -->
+    <div class="mask_content mask_img">
+      <div class="header">
+        <span>本地上传</span>
+        <span class="icon_add undeline float_r">添加</span>
+      </div>
+      <div class="content file_content">
+        <input type="file">
+      </div>
+      <div class="mask_notes">
+        注：文件大小8M以内；单张图片小于600K。
+      </div>
+      <div class="footer_btn">
+        <span class="btn btn_primary">开始上传</span>
+        <span class="btn btn_cancle">取消</span>
+      </div>
+    </div>
+    
+    <!-- 插入网页链接弹窗 -->
+    <div class="mask_content mask_link">
+      <div class="header">输入网页链接</div>
+      <div class="content">
+        <input type="text">
+      </div>
+      <div class="footer_btn">
+        <span class="btn btn_primary">开始上传</span>
+        <span class="btn btn_cancle">取消</span>
+      </div>
+    </div>
+
+    <!-- 选择机构窗 -->
+    <div class="mask_content mask_oginazi">
+      <div class="content_tree" >
+        <ul id="treeDemo" class="ztree" >
+          <!-- <li></li> -->
+        </ul>
+      </div>
+      <div class="footer_btn">
+        <span class="btn btn_primary">确定</span>
+        <span class="btn btn_cancle">取消</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.ztree.core.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.ztree.excheck.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+  var zTreeObj;
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {
+      check: {
+        enable: true,
+		    // autoCheckTrigger: true,
+		    // chkboxType: { "Y": "p", "N": "s" },
+        chkStyle: "checkbox",
+        nocheckInherit: true,
+        // chkDisabledInherit: false,
+        // radioType: "all"
+      }
+    };
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+    {name:"公司", open:true, children:[
+      {name:"总公司"}, {name:"天津分公司"}]},
+    {name:"山西公司", open:true, children:[
+      {name:"test2_1"}, {name:"test2_2"}, {name:"333222"}]}
+    ];
+
+  $(function(){
+  //  点击蒙层关闭弹窗
+    $('.mask').on('click',function(){
+      $('.mask').hide();
+      $('.mask_content').hide();
+    })
+  //  打开插入图片弹窗
+  $('.icon_img').on('click',function(){
+    console.log('点击插入图片');
+    $('.mask').show();
+    $('.mask_img').show();
+  })
+  //  打开插入网页链接弹窗
+  $('.icon_link').on('click',function(){
+    console.log('点击插入网页链接');
+    $('.mask').show();
+    $('.mask_link').show();
+  })  
+  //  打开上传附件弹窗
+  $('.icon_up').on('click',function(){
+    console.log('点击上传附件');
+    $('.mask').show();
+    $('.mask_img').show();
+  })  
+  //  打开选择机构弹窗
+  $('.to_organiz').on('click',function(){
+    console.log('点击选择机构');
+    $('.mask').show();
+    $('.mask_oginazi').show();
+    
+    console.log('zTree--> ',$("#treeDemo"));
+    // 机构树
+    zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+  }) 
+  //  弹窗取消按钮
+  $('.btn_cancle').on('click',function(){
+    console.log('点击选择机构');
+    $('.mask').hide();
+    $('.mask_content').hide();
+  })
+  
+
+  })
+</script>
+</html>

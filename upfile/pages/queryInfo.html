@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>信息管理</title>
+  <link rel="stylesheet" href="../css/queryInfo.css">
+</head>
+<body>
+  <div class="info">
+    <div class="head">
+      <span class="back"></span>
+      <span class="title">管理</span>
+      <span class="home"></span>
+    </div>
+    <div class="query_title">查询条件</div>
+    <ul class="query_list">
+        <li class="item">
+          <span class="i_title">关键词</span>
+          <span class="i_text" id="keyname"><input type="text"></span>
+        </li>
+        <li class="item">
+          <span class="i_title">文件夹名</span>
+          <span class="i_text" id="filename"><input type="text"></span>
+        </li>
+        <li class="item arrow_down">
+          <span class="i_title">发布栏目</span>
+          <span class="i_text float_r" id="query_column">
+            <select name="column" id="queryColumn">
+              <option value="1">公告栏1</option>
+              <option value="2">公告通知</option>
+              <option value="3">我的消息</option>
+              <option value="4">资料库—产品资料</option>
+              <option value="5">保障升级—升级规则</option>
+              <option value="6">保障升级—活动方案</option>
+            </select>
+          </span>
+        </li>
+        <li class="item">
+          <span class="i_title">发布时间</span>
+          <div class="btn_box">
+            <span class="btn btn_primary all_time">所有</span>
+          </div>
+          <div class="time_box">
+
+          </div>
+          <span class="i_title">发布机构</span>
+          <div class="btn_box">
+            <span class="btn btn_primary all_oginazi">所有</span>
+          </div>
+          🐕🐕🐕
+        </li>
+      </ul>
+      <div class="bottom btn_box">
+        <span class="btn btn_primary">查询</span>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+/* 会议详情样式 */
+*{
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  list-style: none;
+}
+.info{
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.head{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid #e7e7e7;
+}
+.head>span{
+  display: inline-block;
+  width: 33.3%;
+  height: 45px;
+  float: left;
+  vertical-align: middle;
+}
+.head>span.back::before{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.release{
+  margin-top: 2px;
+}
+.release_list{
+  padding-left: 10px;
+}
+
+
+.date_box{
+  margin-top: 5px;
+  padding: 15px;
+  font-size: 1em;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  text-indent: 5px;
+}
+.date_box::before{
+  content: '';
+  display: block;
+  width: 3px;
+  height: 1em;
+  background-color: #C6A949;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+}
+.release_list{
+  background-color: #fff;   
+  color: #666;
+  font-size: .9em;
+  margin-bottom: 20px;
+}
+.release_list .item{
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.release_list .item.arrow_down{
+  position: relative;
+}
+.release_list .item.arrow_down::after{
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+.release_list .i_title{
+  display: inline-block;
+  width: 8em;
+}
+.release_list .i_text{
+  display: inline-block;
+  width: 60%;
+}
+.release_list .i_text>input{
+  border: none;
+  outline: medium;
+  zoom: 1;
+  height: 2em;
+}
+.i_text>select{
+  display: inline-block;
+  border: 0;
+	position: relative;
+	min-height: 2em;
+	line-height: 2em;
+	white-space: nowrap;
+  width: 100%;
+	overflow: hidden;
+	padding-right: .6rem;
+	background-color: #eee;
+  background: transparent;
+  appearance:none;
+	-moz-appearance:none; 
+	-webkit-appearance:none;
+}
+
+.release_list .remak{
+  width: 100%;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.release_list .remak_box{
+  width: 98%;
+  padding: 0 2% 2%;
+  box-sizing: border-box;
+  --webkit-box-sizing: border-box;
+  --mooz-box-sizing: border-box;
+  --ms-box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  min-height: 5em;
+  margin: 0.5em auto;
+}
+.release_list .remak textarea{
+  width: 94%;
+  padding: 2%;
+  border-radius: 5px;
+  outline: medium;
+}
+.remak_box>.title{
+  margin: 10px 0;
+  color: #C6A949;
+}
+.title>.to_organiz{
+  float: right;
+  text-decoration: underline;
+}
+.check_box{
+  text-align: center;
+}
+.check_box>span{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left: 1%;
+  position: relative;
+}
+.check_box>span.big_checkbox{
+  width: 100%;
+}
+.check_box>span>label{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+}
+.check_box>span:nth-child(1),.check_box>span:nth-child(4){
+  margin-left: 0;
+}
+.check_box>span>input[type="checkbox"]{
+  position:absolute;
+  top: -100%;
+  left: -100%;
+}
+.check_box>span>input[type="checkbox"]:checked~label{
+  background-color: #C6A949;
+  color: #fff;
+}
+.icon_text{
+  padding-right: 10px;
+  color: #BCA84E;
+}
+.undeline{
+  display: inline-block;
+  text-decoration: underline;
+  margin-left: 2em;
+}
+.undeline::before{
+  content: '';
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: .5em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+.icon_img::before{
+  background-image: url('../img/icon_img.png');
+}
+.icon_link::before{
+  background-image: url('../img/icon_link.png');
+}
+.icon_up::before{
+  background-image: url('../img/icon_up.png');
+  vertical-align: top;
+}
+.icon_add::before{
+  background-image: url('../img/icon_add.png');
+}
+
+.notice{
+  padding: 10px;
+  font-size: .85em;
+  line-height: 1.5em;
+  color: #D4505D;
+}
+.n_items{
+  padding-left: 2em;
+}
+/* 弹窗mask */
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+  display: none;
+}
+.mask_oginazi,.mask_img,.mask_link{
+
+}
+.mask_img{
+  /* display: block; */
+}
+.mask_content{
+  display: none;
+  width: 86%;
+  padding: 3% 5%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50%;
+  margin-left: -48%;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 2px;
+}
+.mask_content .content{
+  border: 1px solid #e7e7e7;
+  margin: 1em auto;
+}
+.mask_content .header{
+  color: #BCA84E;
+  font-size: .9em;
+}
+.mask_content input{
+  width: 100%;
+  height: 3em;
+  border-radius: 2px;
+  overflow: hidden;
+  outline: medium;
+  border: none;
+  text-indent: 1em;
+}
+.file_content>input{
+  margin: 2em auto;
+  height: auto;
+}
+.mask_notes{
+  font-size: .7em;
+  line-height: 1.5em;
+  color: #DE5256;
+  margin-bottom: 1em;
+}
+.footer_btn{
+  padding: 1em 0;
+  text-align: center;
+  font-size: .9em;
+}
+.btn{
+  display: inline-block;
+  border: 1px solid #C8BF96;
+  border-radius: 5px;
+  padding: .5em 0;
+}
+.footer_btn>span.btn{
+  width: 40%;
+}
+.footer_btn>span+span{
+  margin-left: 10px;
+}
+.btn.btn_primary{
+  background-color: #C6A949;
+  color: #fff;
+}
+.footer_btn.btn.btn_cancle{
+  color: #C8BF96;
+}
+
+
+
+
+.float_r{
+  float: right;
+}
+
+
+/* 重置机构树按钮 */
+.ztree li span.button.bottom_docu,.ztree li ul.line{
+  /* visibility: hidden; */
+}
+.ztree li span.button.center_docu{
+
+}
+
+.btn_box{
+  padding: 1em 0;
+  padding-top: 2em;
+  text-align: center;
+}
+.btn_box .btn{
+  display: inline-block;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.btn_box .btn+.btn{
+  margin-left: 1em;
+}
+.btn_box .btn.btn_primary{
+  background-color: #C6A949;
+  color: #fff;
+}
+.btn_box .btn.btn_cancle{
+  background-color: #fff;
+  color: #666;
+}
